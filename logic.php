@@ -22,10 +22,11 @@ function generatePasswords($words, $symbol, $number){
 	for ($i=0; $i < $length; $i++) {
 	  $generatedPassword = $words[shuffle($words)];
 
+
 	  // Add number if checkbox is selected
 	  if ($isNumber) {
 	  	$generatedPassword .= rand(0, 20);
-	  	array_push($words, $isNumber);
+	    array_push($words, $isNumber);
 	}
 
 	  // Add symbol if checkbox is selected

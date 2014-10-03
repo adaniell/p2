@@ -14,7 +14,7 @@
 		<h1>xkcd Password Generator</h1>
 		<p>Welcome! Please use this application to generate a secure and reliable password. </p>
 		<p>The xkcd style generator is widely used as it gives you a password phrase with only common English words. 
-		The idea is to put random dictionary words together, creating a unique phrase which would be tough for others to guess, but easy for you to remember.  </p>
+		The idea is to put random dictionary words together, creating a unique phrase which would be tough for others to guess, but easy for you to remember.</p>
 	</div>
 
 	<div id="content">
