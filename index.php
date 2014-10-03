@@ -9,43 +9,40 @@
 </head>
 
 <body>
-<div id="header">
-<h1>xkcd Password Generator</h1>
-<p>Welcome! Please use this application to generate a secure and reliable password. </p>
-<p>The xkcd style generator is widely used as it gives you a password phrase with only common English words. 
-The idea is to put random dictionary words together, creating a uniuque phrase which would be tough for others to guess, but easy for you to remember.  </p>
 
-</div>
+	<div id="header">
+		<h1>xkcd Password Generator</h1>
+		<p>Welcome! Please use this application to generate a secure and reliable password. </p>
+		<p>The xkcd style generator is widely used as it gives you a password phrase with only common English words. 
+		The idea is to put random dictionary words together, creating a uniuque phrase which would be tough for others to guess, but easy for you to remember.  </p>
+	</div>
 
-<div id="content">
+	<div id="content">
 
+		<form method='GET' action='index.php'>
+    		<p>How many words? <input maxlength='1' type='text' name='length' size='1'> (Max 8)</p>
+    		<p>Include numbers? Yes <input type='checkbox' name='number'></p>
+   		    <p>Include symbols? <span class="small">(i.e. !@#)</span> Yes <input type='checkbox' name='symbol'></p>
 
-<form method='GET' action='index.php'>
-    
-    <p>How many words? <input maxlength=1 type='text' name='words' size='1'> (Max 8)</p>
-    <p>Include a number? Yes <input type='checkbox' name='numbers'></p>
-    <p>Include a symbol? <span class="small">(i.e. !@#)</span> Yes <input type='checkbox' name='symbol'></p>
+		    <input type='submit' value='Generate My Password!'><br>
+		</form>
 
-    <input type='submit' value='Generate My Password!'><br>
+		<div class="password">
+			<p>
 
-</form>
+				<?php 
+					generatePasswords($words, $symbol, $number);
 
-<div class="password">
-	<p>
-	<?php 
-		foreach($words as $key => $value) {
-    		echo " ".$value;
-		}
+					/*foreach($words as $key => $value) {
+			    		echo " ".$value;
+					}*/
+				?>
+			</p>
+		</div>
 
-	?>
-	
+		<a href="http://xkcd.com/936/" target="_blank"><img src="http://imgs.xkcd.com/comics/password_strength.png" alt="pwd generator"/></a>
 
+	</div>
 
-
-</div>
-
-<a href="http://xkcd.com/936/" target="_blank"><img src="http://imgs.xkcd.com/comics/password_strength.png" alt="pwd generator"/></a>	
 </body>
-</div>
-
 </html>
