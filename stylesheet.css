@@ -63,6 +63,7 @@ form {
 	border: 2px solid black;
 	padding:10px;
 	margin-bottom: 10px;
+	text-align: center;
 }
 img {
 	text-align: center;
@@ -77,4 +78,8 @@ img {
 }
 .small {
 	font-size: 14px;
+}
+.btn {
+	border: 1px solid black;
+	padding: 10px;
 }

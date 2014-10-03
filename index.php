@@ -23,19 +23,13 @@
     		<p>How many words? <input maxlength='1' type='text' name='length' size='1'> (Max 8)</p>
     		<p>Include numbers? Yes <input type='checkbox' name='number'></p>
    		    <p>Include symbols? <span class="small">(i.e. !@#)</span> Yes <input type='checkbox' name='symbol'></p>
-
-		    <input type='submit' value='Generate My Password!'><br>
+		    <input type='submit' value='Generate My Password!' class='btn'><br>
 		</form>
 
 		<div class="password">
 			<p>
-
 				<?php 
 					generatePasswords($words, $symbol, $number);
-
-					/*foreach($words as $key => $value) {
-			    		echo " ".$value;
-					}*/
 				?>
 			</p>
 		</div>

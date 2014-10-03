@@ -1,38 +1,32 @@
 <?php
 
+// Variables
 $number = rand(0, 20);
 $symbol = ".-+=_,!@$#*%<>[]{}";
 $words = array("yellow", "moon", "smile", "risk", "elephant", "language", "pool", "love", "albert", "picnic");
-$chars = "";
-
-
-//$length = count($words);
- 
-for ($x=0; $x<=5; $x++) {
-  echo $words[$x];
-} 
 
 
 function generatePasswords($words, $symbol, $number){
-	$length = $_GET['length'];
-
+	$length = isset($_GET['length']) ? $_GET['length'] : 0;
 	$isNumber = isset($_GET['number']);
 	$isSymbol = isset($_GET['symbol']);
-	
-	//Validate input
+
+	// Validate input
 	if($length > 8){
-		echo 'Please enter a value below 8';
+		echo 'please enter a value below 8';
 		return;
+    }elseif ($length == 0) {
+    	echo 'please enter number of words to generate password';
     }
 
-	for ($x=0; $x<=$length-1; $x++) {
-	  $generatedPassword = $words[$x];
+	for ($i=0; $i < $length; $i++) {
+	  $generatedPassword = $words[$i];
 
-	  //Append number if selected
+	  // Add number if checkbox is selected
 	  if ($isNumber)
 	  	$generatedPassword .= rand(0, 20);
 
-	  //Append symbol if selected
+	  // Add symbol if checkbox is selected
 	  if ($isSymbol){
 	  	$symbolIndex = rand(0, strlen($symbol) - 1);
 	    $generatedPassword .= $symbol[$symbolIndex];
