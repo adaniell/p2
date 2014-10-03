@@ -3,7 +3,7 @@
 // Variables
 $number = rand(0, 20);
 $symbol = ".-+=_,!@$#*%<>[]{}";
-$words = array("yellow", "moon", "smile", "risk", "elephant", "language", "pool", "love", "albert", "picnic");
+$words = array("yellow", "moon", "smile", "risk", "elephant", "language", "pool", "love", "albert", "picnic", "park", "dress", "cake", "fruit");
 
 
 function generatePasswords($words, $symbol, $number){
@@ -20,16 +20,19 @@ function generatePasswords($words, $symbol, $number){
     }
 
 	for ($i=0; $i < $length; $i++) {
-	  $generatedPassword = $words[$i];
+	  $generatedPassword = $words[shuffle($words)];
 
 	  // Add number if checkbox is selected
-	  if ($isNumber)
+	  if ($isNumber) {
 	  	$generatedPassword .= rand(0, 20);
+	  	array_push($words, $isNumber);
+	}
 
 	  // Add symbol if checkbox is selected
-	  if ($isSymbol){
+	  if ($isSymbol) {
 	  	$symbolIndex = rand(0, strlen($symbol) - 1);
 	    $generatedPassword .= $symbol[$symbolIndex];
+	    array_push($words, $isSymbol);
 	  }
 
 	  echo $generatedPassword;

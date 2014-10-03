@@ -12,7 +12,8 @@ h1 {
 	color:#c21250;
 	font-family:Tahoma, Geneva, sans-serif;
 	font-size:48px;
-	margin-bottom:20px
+	margin-bottom:20px;
+	margin-top:10px;
 }
 p {
 	font-weight:bold;
