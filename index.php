@@ -20,7 +20,7 @@
 	<div id="content">
 
 		<form method='get' action='index.php'>
-    		<p>How many words? <input maxlength='1' type='text' name='length' size='1'/> (Max 8)</p>
+    		<p>How many words? <input maxlength='1' type='text' name='length' size='1'/> (Recommended 4, Max 8)</p>
     		<p>Include numbers? Yes <input type='checkbox' name='number'/></p>
    		    <p>Include symbols? <span class="small">(i.e. !@#)</span> Yes <input type='checkbox' name='symbol'/></p>
 		    <input type='submit' value='Generate My Password!' class='btn'/><br/>
