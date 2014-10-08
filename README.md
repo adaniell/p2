@@ -22,4 +22,4 @@ I referenced these pages to get an idea of xkcd definition:
 I'm having trouble getting my array of words not to repeat. I tried using both shuffle and the rand function but get the same results every time. 
 
 ## Outside code 
-No outside code. 
+No outside code.  
